@@ -40,7 +40,7 @@ const data: Payment[]= [{
 const AccountsPage = () => {
     const newAccount = useNewAccount();
     return (
-        <div className='max-w-screen-xl mx-auto w-full'>
+        <div className='max-w-screen-xl mx-auto w-full -mt-24'>
             <Card className="border-none drop-shadow-lg">
                 <CardHeader className="gap-y-2 lg:flex-row lg:justify-between lg:items-center">
                     <CardTitle className="text-xl line-clamp-1">Accounts Page</CardTitle>
