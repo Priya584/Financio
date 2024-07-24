@@ -9,8 +9,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Edit, MoreHorizontal, Trash } from "lucide-react";
 
-import useConfirm from "@/hooks/use-confirm";
-import { useDeleteCategory } from "@/features/categories/api/use-delete-category";
+import { useConfirm } from "@/hooks/use-confirm";
+import { useDeleteCategory } from "@/features/categories/api/use-delete-categories";
 import { useOpenCategory } from "@/features/categories/hooks/use-open-category";
 
 type Props = {
@@ -45,11 +45,11 @@ export const Actions = ({ id }: Props) => {
         </DropdownMenuTrigger>
         <DropdownMenuContent>
           <DropdownMenuItem disabled={deleteMutation.isPending} onClick={() => onOpen(id)}>
-            <Edit className="size-5 mr-2"/>
+            <Edit className="size-4 mr-2"/>
             Edit
           </DropdownMenuItem>
           <DropdownMenuItem disabled={deleteMutation.isPending} onClick={handleDelete}>
-            <Trash className="size-5 mr-2"/>
+            <Trash className="size-4 mr-2"/>
             Delete
           </DropdownMenuItem>
         </DropdownMenuContent>
