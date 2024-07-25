@@ -1,8 +1,8 @@
-import {create} from 'zustand';
+import { create } from 'zustand';
 
 type OpenCategoryState = {
     id?:string;
-    isOpen : Boolean;
+    isOpen : boolean;
     onOpen : (id:string)=> void;
     onClose : ()=> void;
 }

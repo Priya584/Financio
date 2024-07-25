@@ -1,7 +1,7 @@
 import {create} from 'zustand';
 
 type NewCategoryState = {
-    isOpen : Boolean;
+    isOpen : boolean;
     onOpen : ()=> void;
     onClose : ()=> void;
 };

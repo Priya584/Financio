@@ -55,7 +55,7 @@ const app = new Hono()
         );
 
       if (!data) {
-        return c.json({ error: "not found" }, 401);
+        return c.json({ error: "not found" }, 404);
       }
 
       return c.json({ data });
@@ -136,9 +136,9 @@ const app = new Hono()
     ),
     zValidator(
       "json",
-    insertCategorySchema.pick({
-        name: true
-      }),
+      insertCategorySchema.pick({
+        name: true,
+      })
     ),
     async (c) => {
       const auth = getAuth(c);
@@ -155,7 +155,6 @@ const app = new Hono()
         .set(values)
         .where(
           and(
-
             eq(categories.userId, auth.userId),
             eq(categories.id, id),
           ),
@@ -164,6 +163,7 @@ const app = new Hono()
       if (!data) {
         return c.json({ error: "not found" }, 404);
       }
+      return c.json({ data })
     }
   )
   .delete(
