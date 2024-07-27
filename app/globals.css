@@ -74,3 +74,12 @@
       @apply bg-background text-foreground;
     }
   }
+
+  @layer utilities {
+    .custom-box-shadow {
+      @apply shadow-none;
+      box-shadow: 0 0 3px black, 0 0 25px #00eeff, 0 0 50px #00eeff , 0 0 200px #00eeff;
+      -webkit-box-reflect: below 1px linear-gradient(transparent , #0006);
+    }
+  }
+  

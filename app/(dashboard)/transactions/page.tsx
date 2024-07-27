@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { useNewCategory } from "@/features/categories/hooks/use-new-category";
+import { useNewTransaction } from "@/features/transactions/hooks/use-new-transaction";
 import { Loader2, Plus } from "lucide-react";
 
 import { columns } from "./columns";
@@ -11,8 +11,8 @@ import { useGetCategories } from "@/features/categories/api/use-get-categories";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useBulkDeleteCategories } from "@/features/categories/api/use-bulk-delete-categories";
 
-const CategoriesPage = () => {
-  const newCategory = useNewCategory();
+const TransactionsPage = () => {
+  const newTransaction = useNewTransaction();
   const deleteCategories = useBulkDeleteCategories()
   const categoriesQuery = useGetCategories();
   const categories = categoriesQuery.data || [];
@@ -40,17 +40,17 @@ const CategoriesPage = () => {
     <div className="max-w-screen-xl mx-auto w-full pb-10 -mt-24">
       <Card className="border-none drop-shadow-lg">
         <CardHeader className="gap-y-2 lg:flex-row lg:items-center lg:justify-between">
-          <CardTitle className="text-xl line-clamp-1">Categories page</CardTitle>
-          <Button onClick={newCategory.onOpen} size="sm">
+          <CardTitle className="text-xl line-clamp-1">Transaction History</CardTitle>
+          <Button onClick={newTransaction.onOpen} size="sm">
             <Plus className="size-4 mr-2" />
             Add new
           </Button>
         </CardHeader>
         <CardContent>
           <DataTable
+            filterKey="name"
             columns={columns}
             data={categories}
-            filterKey="name"
             onDelete={(row) => {
               const ids = row.map((r) =>  r.original.id)
               deleteCategories.mutate({ ids })
@@ -63,4 +63,4 @@ const CategoriesPage = () => {
   );
 };
 
-export default CategoriesPage;
+export default TransactionsPage;

@@ -21,8 +21,9 @@ export default function Page() {
 					</ClerkLoading>
 				</div>
 			</div>
-			<div className="h-full bg-blue-600 hidden lg:flex items-center justify-center">
-				<Image src='/logo.svg' height={100} width={100} alt="logo"/> 
+			<div className="h-full bg-black hidden lg:flex flex-col items-center justify-center group">
+				<Image src='/logo.svg' height={100} width={100} className="animate-bounce group-hover:animate-pulse" alt="logo"/>
+				<div className="tracking-[5px] mt-5 font-bold italic text-black text-5xl group-hover:text-[#00eeff] transition duration-500 group-hover:custom-box-shadow p-4">FINANCIO</div> 
 			</div>
 		</div>
 	);
