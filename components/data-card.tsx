@@ -60,7 +60,7 @@ export const DataCard = ({
 	percentageChange = 0,
 }: DataCardProps) => {
 	return (
-		<Card className="border-none drop-shadow-sm">
+		<Card className="shadow1 hover:scale-105 hover:cursor-pointer transition duration-200">
 			<CardHeader className="flex flex-row items-center justify-between gap-x-4">
 				<div className="space-y-2">
 					<CardTitle className="text-2xl line-clamp-1">{title}</CardTitle>
@@ -100,7 +100,7 @@ export const DataCard = ({
 
 export const DataCardLoading = () => {
 	return (
-		<Card className="border-none drop-shadow-sm h-[192px]">
+		<Card className="shadow1 h-[192px]">
 			<CardHeader className="flex flex-row items-center justify-between gap-x-4">
 				<div className="space-y-2">
 					<Skeleton className="h-6 w-24" />

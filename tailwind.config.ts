@@ -8,7 +8,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -68,23 +68,23 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "button1":{
-          from:{left : "-100%"},
-          to: {left : "0%"}
+        "button1": {
+          from: { left: "-100%" },
+          to: { left: "0%" }
         },
-        "button2":{
-          from:{top : "-50%"},
-          to:{top : "10%"}
+        "button2": {
+          from: { top: "-70%" },
+          to: { top: "10%" }
         },
-        "button3":{
-          from:{left : "10%"},
-          to:{left : "0%"}
+        "button3": {
+          from: { left: "30%" },
+          to: { left: "0%" }
         },
-        "button4":{
-          from:{bottom : "-50%"},
-          to:{bottom : "10%"}
+        "button4": {
+          from: { bottom: "-50%" },
+          to: { bottom: "10%" }
         }
-        
+
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -94,7 +94,7 @@ const config = {
         "button3": "button3 0.5s infinite 1.8s",
         "button4": "button4 0.5s infinite 2.5s",
       },
-      backgroundImage : {
+      backgroundImage: {
         'custom-gradient': 'linear-gradient(to bottom, #000000 20%, #00EEFF)',
       }
     },
