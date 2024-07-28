@@ -1,7 +1,8 @@
-import { z } from "zod";
+import { string, z } from "zod";
 import { Trash } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { insertCategorySchema } from "@/db/schema";
@@ -11,6 +12,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
+  FormMessage,
 } from "@/components/ui/form";
 
 const formSchema = insertCategorySchema.pick({
@@ -36,17 +38,14 @@ export const CategoryForm = ({
 }: Props) => {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
-    defaultValues: defaultValues,
+    defaultValues,
   });
-
   const handleSubmit = (values: FormValues) => {
-    onSubmit(values)
+    onSubmit(values);
   };
-
   const handleDelete = () => {
     onDelete?.();
   };
-
   return (
     <Form {...form}>
       <form
@@ -62,24 +61,23 @@ export const CategoryForm = ({
               <FormControl>
                 <Input
                   disabled={disabled}
-                  placeholder="e.g food,travel etc"
+                  placeholder="e.g. Food, Travel, etc."
                   {...field}
                 />
               </FormControl>
             </FormItem>
           )}
         />
-
         <Button className="w-full" disabled={disabled}>
-          {id ? "Save Changes" : "Create category"}
+          {id ? "Save changes" : "Create category"}
         </Button>
-
         {!!id && (
           <Button
             type="button"
             disabled={disabled}
             onClick={handleDelete}
             className="w-full"
+            size="icon"
             variant="outline"
           >
             <Trash className="size-4 mr-2" />

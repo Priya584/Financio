@@ -1,5 +1,10 @@
 import { z } from "zod";
 
+import { CategoryForm } from "./category-form";
+import { useNewCategory } from "../hooks/use-new-category";
+import { useCreateCategory } from "../api/use-create-category";
+
+import { insertCategorySchema } from "@/db/schema";
 import {
   Sheet,
   SheetContent,
@@ -7,16 +12,12 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
-import { CategoryForm } from "@/features/categories/components/category-form";
-import { useNewCategory } from "../hooks/use-new-category";
-import { useCreateCategory } from "../api/use-create-catgories";
-import{insertCategorySchema} from "@/db/schema";
 
-const categorySchema = insertCategorySchema.pick({
+const formSchema = insertCategorySchema.pick({
   name: true,
 });
 
-type FormValues = z.input<typeof categorySchema>;
+type FormValues = z.input<typeof formSchema>;
 
 export const NewCategorySheet = () => {
   const { isOpen, onClose } = useNewCategory();
@@ -30,14 +31,13 @@ export const NewCategorySheet = () => {
       },
     });
   };
-
   return (
     <Sheet open={isOpen} onOpenChange={onClose}>
       <SheetContent className="space-y-4">
         <SheetHeader>
-          <SheetTitle>New category</SheetTitle>
+          <SheetTitle>New Category</SheetTitle>
           <SheetDescription>
-            Create a new category to organise your transactions.
+            Create a new category to organize your transactions.
           </SheetDescription>
         </SheetHeader>
         <CategoryForm
