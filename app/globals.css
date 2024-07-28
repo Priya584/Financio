@@ -81,5 +81,22 @@
       box-shadow: 0 0 3px black, 0 0 25px #00eeff, 0 0 50px #00eeff , 0 0 200px #00eeff;
       -webkit-box-reflect: below 1px linear-gradient(transparent , #0006);
     }
+    .text-stroke{
+      -webkit-text-stroke: 0.5px white;
+    }
+    .welcome::before{
+      content: attr(data-content);
+      position: absolute;
+      width: 0%;
+      height: 100%;
+      color: white;
+      border-right: 3px solid white;
+      overflow: hidden;
+      transition: 1s ease-in-out;
+    }
+    .welcome:hover::before{
+      width: 45%;
+      filter: drop-shadow(0 0 1px white);
+    }
   }
   
