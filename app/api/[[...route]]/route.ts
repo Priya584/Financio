@@ -4,6 +4,7 @@ import accounts from './accounts';
 import categories from './categories';
 import summary from './summary';
 
+
 export const runtime = 'edge';
 
 const app = new Hono().basePath('/api');

@@ -18,6 +18,7 @@ export const SheetProvider = () => {
 
       <NewCategorySheet />
       <EditCategorySheet />
+
     </>
   );
 };
