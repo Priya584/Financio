@@ -1,57 +1,3 @@
-<<<<<<< HEAD
-"use client";
-
-import { useMemo } from "react";
-import { SingleValue } from "react-select";
-import CreateableSelect from "react-select/creatable";
-
-type Props = {
-	onChange: (value?: string) => void;
-	onCreate?: (value: string) => void;
-	options?: { label: string; value: string }[];
-	value?: string | null | undefined;
-	disabled?: boolean;
-	placeholder?: string;
-};
-
-export const Select = ({
-	value,
-	onChange,
-	disabled,
-	onCreate,
-	options = [],
-	placeholder,
-}: Props) => {
-	const onSelect = (option: SingleValue<{ label: string; value: string }>) => {
-		onChange(option?.value);
-	};
-
-	const formattedValue = useMemo(() => {
-		return options.find(option => option.value === value);
-	}, [options, value]);
-
-	return (
-		<CreateableSelect
-			placeholder={placeholder}
-			className="text-sm h-10"
-			styles={{
-				control: base => ({
-					...base,
-					borderColor: "#e2e8f0",
-					":hover": {
-						borderColor: "#e2e8f0",
-					},
-				}),
-			}}
-			value={formattedValue}
-			onChange={onSelect}
-			options={options}
-			onCreateOption={onCreate}
-			isDisabled={disabled}
-		/>
-	);
-};
-=======
 'use client'
 
 
@@ -62,7 +8,7 @@ import CreateableSelect from 'react-select/creatable'
 type Props = {
     onChange : (value ?: string) => void;
     onCreate ?: (value : string) => void;
-    options?: {lable : string ; value : string}[]
+    options?: {label : string ; value : string}[]
     value ?: string | null | undefined;
     disabled?: boolean;
     placeholder ?: string;
@@ -76,7 +22,7 @@ export const Select = ({
     options = [],
     placeholder
 }: Props)=>{
-    const onSelect = (options : SingleValue<{ lable : string ; value : string}>) => {
+    const onSelect = (options : SingleValue<{ label : string ; value : string}>) => {
         onChange(options?.value)
     }
 
@@ -105,4 +51,3 @@ export const Select = ({
         />
     )
 }
->>>>>>> 400fbcea211ca05a504c4f6dd884a6ac871bb31b
