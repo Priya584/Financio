@@ -8,6 +8,7 @@ import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
+import Image from "next/image";
 
 const routes = [
 	{
@@ -54,6 +55,19 @@ function Navigation() {
 				</SheetTrigger>
 				<SheetContent side="left" className="px-2">
 					<nav className="flex flex-col gap-y-2 pt-6">
+						<Button
+								variant={'/' === pathname ? "secondary" : "ghost"}
+								key={'/'}
+								onClick={() => onClick('/')}
+								className="w-full justify-start"
+							>
+							<div className="items-center flex">
+								<Image src="/logo.svg" alt="logo" height={30} width={30} />
+								<p className="font-semibold dark:text-white ml-2.5">
+									Financio
+								</p>
+							</div>
+						</Button>
 						{routes.map(route => (
 							<Button
 								variant={route.href === pathname ? "secondary" : "ghost"}
