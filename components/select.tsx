@@ -8,7 +8,7 @@ import CreateableSelect from 'react-select/creatable'
 type Props = {
     onChange : (value ?: string) => void;
     onCreate ?: (value : string) => void;
-    options?: {lable : string ; value : string}[]
+    options?: {label : string ; value : string}[]
     value ?: string | null | undefined;
     disabled?: boolean;
     placeholder ?: string;
@@ -22,7 +22,7 @@ export const Select = ({
     options = [],
     placeholder
 }: Props)=>{
-    const onSelect = (options : SingleValue<{ lable : string ; value : string}>) => {
+    const onSelect = (options : SingleValue<{ label : string ; value : string}>) => {
         onChange(options?.value)
     }
 

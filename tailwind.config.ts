@@ -73,16 +73,16 @@ const config = {
           to: { left: "0%" }
         },
         "button2": {
-          from: { top: "-70%" },
-          to: { top: "10%" }
+          from: { top: "-90%" },
+          to: { top: "-15%" }
         },
         "button3": {
           from: { left: "30%" },
           to: { left: "0%" }
         },
         "button4": {
-          from: { bottom: "-50%" },
-          to: { bottom: "10%" }
+          from: { bottom: "-90%" },
+          to: { bottom: "-15%" }
         }
 
       },
