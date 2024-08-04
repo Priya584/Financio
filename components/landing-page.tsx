@@ -6,6 +6,7 @@ import { Loader2 } from "lucide-react";
 import Navigation from "./Navigation";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import { ModeToggle } from "./theme-change";
 
 function LandingPage() {
 	const { isSignedIn } = useUser();
@@ -17,6 +18,7 @@ function LandingPage() {
 						<HeaderLogo />
 						<Navigation />
 					</div>
+					<div className="flex items-center gap-x-8">
 					<div>
 						{isSignedIn ? (
 							<div>
@@ -36,6 +38,8 @@ function LandingPage() {
                                 </Link>
 							</div>
 						)}
+					</div>
+					<ModeToggle />
 					</div>
 				</div>
 			</div>
