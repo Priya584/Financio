@@ -6,13 +6,10 @@ import { Toaster } from "@/components/ui/sonner";
 import { QueryProvider } from "@/providers/query-provider";
 import { SheetProvider } from "@/providers/sheet-provider";
 
-<<<<<<< HEAD
 import { DM_Sans } from "next/font/google";
 import {twMerge} from "tailwind-merge"
 const dmSans = DM_Sans({ subsets: ["latin"] });
-=======
 import { ThemeProvider } from "@/providers/theme-provider"
->>>>>>> 3a1efdef95c658fbc153280df91332c2b329cb25
 
 import "./globals.css";
 
@@ -30,18 +27,13 @@ export default function RootLayout({
 }>) {
 	return (
 		<ClerkProvider>
-<<<<<<< HEAD
 			<html lang="en" className="relative">
 				<body className={twMerge(dmSans.className, "antialiased bg-[#EAEEFE]" , inter.className)}>
-=======
-			<html lang="en">
-				<body className={inter.className}>
-					<ThemeProvider
+				<ThemeProvider
 						attribute="class"
 						defaultTheme="system"
 						enableSystem
 						disableTransitionOnChange>
->>>>>>> 3a1efdef95c658fbc153280df91332c2b329cb25
 					<QueryProvider>
 						<SheetProvider />
 						<Toaster />
