@@ -6,6 +6,10 @@ import { Toaster } from "@/components/ui/sonner";
 import { QueryProvider } from "@/providers/query-provider";
 import { SheetProvider } from "@/providers/sheet-provider";
 
+import { DM_Sans } from "next/font/google";
+import {twMerge} from "tailwind-merge"
+const dmSans = DM_Sans({ subsets: ["latin"] });
+
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,8 +26,8 @@ export default function RootLayout({
 }>) {
 	return (
 		<ClerkProvider>
-			<html lang="en">
-				<body className={inter.className}>
+			<html lang="en" className="relative">
+				<body className={twMerge(dmSans.className, "antialiased bg-[#EAEEFE]" , inter.className)}>
 					<QueryProvider>
 						<SheetProvider />
 						<Toaster />
