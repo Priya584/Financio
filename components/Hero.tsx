@@ -11,7 +11,7 @@ export const Hero = () => {
       <div className="container">
         <div className="md:flex items-center">
           <div className="md:w-[478px]">
-            <div className="text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight">
+            <div className="text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight dark:text-black">
               financio is here
             </div>
             <h1 className="md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6">
