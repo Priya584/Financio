@@ -4,6 +4,7 @@ import Image from "next/image";
 import cogImage from "@/public/cog.png";
 import cylinderImage from "@/public/cylinder.png";
 import noodleImage from "@/public/noodle.png";
+import {motion} from "framer-motion";
 
 export const Hero = () => {
   return (
@@ -30,10 +31,52 @@ export const Hero = () => {
               </button>
             </div>
           </div>
-          <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative">
-            <Image src={cogImage} alt="cogImage" className="md:absolute md:h-full md:w-auto md:max-w-none md:left-28" />
-            <Image src={cylinderImage} alt="cylinderImage" width={220} height={220} className="hidden md:block -top-8 -left-22 md:absolute" />
-            <Image src={noodleImage} alt="noodleImage" width={220} height={220} className="hidden lg:block absolute top-[524px] left-[578px] rotate-[30deg]" />
+          <div className="mt-20 md:mt-0 md:h-[648px] mr-10 md:flex-1 relative ">
+            <motion.img
+            src={cogImage.src}
+            alt="Cog Image"
+            className="md:absolute md:h-full md:w-auto md:max-w-none md:left-6 lg:left-0 lg:ml-52 "
+            animate={{
+              x: 0,
+              y: 0,
+              scale: 1,
+              rotate: 270,
+
+            }}
+            transition={{
+              repeat:Infinity,
+              repeatType: "mirror",
+              duration: 5,
+              ease: "easeInOut"
+            }}
+
+            />
+            {/* <Image src={cogImage} alt="cogImage" className="md:absolute md:h-full md:w-auto md:max-w-none md:left-28" /> */}
+            <motion.img 
+            src={cylinderImage.src} 
+            alt="cylinderImage" width={220} height={220} className="-24 h-48 rounded-full flex items-center justify-center overflow-hidden relative"
+            animate={{
+              y:[0,50,0],
+              scale:1,
+              
+            }}
+            transition={{
+              duration: 2,  // Duration of one full rotation
+              repeat: Infinity,  // Repeat indefinitely
+                  }}
+            />
+            <motion.img src={noodleImage.src} alt="noodleImage" width={220} height={220} className="hidden lg:block absolute top-[524px] left-[578px] rotate-[30deg] lg:ml-52" 
+            animate={{
+              x: [0,-10,0],
+              y:[0,15],
+              rotate: [0,180],
+              scale: [1,1.1,1],
+            }}
+            transition={{
+              repeat:Infinity,
+              duration: 5,
+            }}
+            />
           </div>
         </div>
       </div>
