@@ -21,6 +21,7 @@ import { DataTable } from "@/components/data-table";
 import { columns } from "./columns";
 import { UploadButton } from "./upload-button";
 import { ImportCard } from "./import-card";
+import { PageWrapper } from "@/components/page-wrapper";
 
 enum VARIANTS {
   LIST = "LIST",
@@ -112,13 +113,14 @@ const TransactionsPage = () => {
   return (
     <div className="max-w-screen-2xl mx-auto -mt-24 pb-10 w-full">
       <Card className="border-none drop-shadow-sm">
+          <PageWrapper>
         <CardHeader className="gap-y-2 lg:flex-row lg:items-center lg:justify-between">
           <CardTitle className="text-xl line-clamp-1">
             Transaction History
           </CardTitle>
           <div className="flex flex-col lg:flex-row gap-y-2 items-center gap-x-6">
             <div className="relative">
-            <Button onClick={newTransaction.onOpen} className="dark:text-[#0c1ca9] uppercase tracking-[1.5px] px-3 py-6 text-base font-bold overflow-hidden transition duration-300 hover:custom-box-shadow">
+            <Button onClick={newTransaction.onOpen} className="dark:text-[#0c1ca9] tracking-[1.5px]">
               <Plus className="size-4 mr-2" />
               Add New
             </Button>
@@ -138,6 +140,7 @@ const TransactionsPage = () => {
             disabled={isDisabled}
           />
         </CardContent>
+          </PageWrapper>
       </Card>
     </div>
   );

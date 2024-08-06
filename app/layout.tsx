@@ -9,6 +9,7 @@ import { SheetProvider } from "@/providers/sheet-provider";
 import { ThemeProvider } from "@/providers/theme-provider"
 
 import "./globals.css";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,9 @@ export default function RootLayout({
 	return (
 		<ClerkProvider>
 			<html lang="en">
+				<head>
+					<title>Financio</title>
+				</head>
 				<body className={inter.className}>
 					<ThemeProvider
 						attribute="class"

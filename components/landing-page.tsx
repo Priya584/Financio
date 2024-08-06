@@ -11,7 +11,7 @@ import { ModeToggle } from "./theme-change";
 function LandingPage() {
 	const { isSignedIn } = useUser();
 	return (
-		<header className="bg-custom-gradient px-4 py-8 lg:px-14 pb-36">
+		<header className="bg-custom-gradient px-4 py-8 lg:px-14">
 			<div className="max-w-screen-2xl mx-auto">
 				<div className="w-full flex items-center justify-between mb-14">
 					<div className="flex items-center lg:gap-x-16">
@@ -32,7 +32,7 @@ function LandingPage() {
 						) : (
 							<div>
                                 <Link href="/sign-in">
-								<Button size="sm" className="text-[#00eeff] tracking-[1.5px] overflow-hidden transition duration-300  hover:custom-box-shadow">
+								<Button size="sm" className="dark:text-[#0c1ca9] tracking-[1.5px]">
                                     Sign In
 								</Button>
                                 </Link>
