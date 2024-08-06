@@ -27,6 +27,10 @@ const routes = [
 		href: "/dashboard/categories",
 		label: "Categories",
 	},
+	{
+		href: "/contactus/",
+		label: "Contact Us",
+	},
 ];
 
 function Navigation() {
