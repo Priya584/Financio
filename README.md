@@ -36,23 +36,23 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ## Key Features
-- **\\ Built with [Next.js 14](https://nextjs.org) (App Router):** Utilizes the latest features and performance optimizations of Next.js for a seamless user experience.
+- **Built with [Next.js 14](https://nextjs.org) (App Router):** Utilizes the latest features and performance optimizations of Next.js for a seamless user experience.
 
-- Fast and Lightweight Hono API Web Framework: Ensures high performance and quick response times for API requests.
+- **Fast and Lightweight [Hono API](https://hono.dev/) Web Framework:** Ensures high performance and quick response times for API requests.
 
-- Drizzle ORM: Interacts with Neon PostgreSQL serverless database, providing robust and efficient database management.
+- **[Drizzle ORM](https://orm.drizzle.team/):** Interacts with [Neon PostgreSQL](https://neon.tech/) serverless database, providing robust and efficient database management.
 
-- UI Components: Developed using Shadcn UI, HeadlessUI, React Icons, TypeScript, and Tailwind CSS for a modern and responsive design.
+- **UI Components:** Developed using Shadcn UI, HeadlessUI, React Icons, TypeScript, and Tailwind CSS for a modern and responsive design.
 
-- Authentication and Authorization with Clerk: Provides secure and easy-to-use authentication and authorization mechanisms.
+- **Authentication and Authorization with [Clerk](https://clerk.com/)**: Provides secure and easy-to-use authentication and authorization mechanisms.
 
-- Beautifully Crafted Dashboard Widgets: Offers an intuitive and visually appealing dashboard with customizable widgets.
+- **Beautifully Crafted Dashboard Widgets:** Offers an intuitive and visually appealing dashboard with customizable widgets.
 
-- Customizable Charts: Built on top of the Recharts package, enabling limitless customization for data visualization.
+- **Customizable Charts:** Built on top of the Recharts package, enabling limitless customization for data visualization.
 
-- Mobile-Friendly TanStack Table: Displays large amounts of data efficiently with pagination, filtering, and sorting options.
+- **Mobile-Friendly [TanStack](https://tanstack.com/) Table:** Displays large amounts of data efficiently with pagination, filtering, and sorting options.
 
-- Framer Motion for Transitions and Hero Section: Adds smooth animations and transitions for a dynamic user interface.
+- **Framer Motion for Transitions and Hero Section:** Adds smooth animations and transitions for a dynamic user interface.
 
 
 
