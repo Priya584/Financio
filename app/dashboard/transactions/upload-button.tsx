@@ -14,7 +14,7 @@ export const UploadButton = ({ onUpload }: Props) => {
       {({ getRootProps }: any) => (
 
         <div className="relative">
-            <Button {...getRootProps()} className="dark:text-[#0c1ca9] uppercase tracking-[1.5px] px-3 py-6 text-base font-bold overflow-hidden transition duration-300  hover:custom-box-shadow">
+            <Button {...getRootProps()} className="dark:text-[#0c1ca9] tracking-[1.5px]">
             <Upload className="mr-2 size-4" />
               Import
             </Button>

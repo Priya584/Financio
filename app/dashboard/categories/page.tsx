@@ -11,6 +11,7 @@ import { DataTable } from "@/components/data-table";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { columns } from "./colomns";
 import { Skeleton } from "@/components/ui/skeleton";
+import { PageWrapper } from "@/components/page-wrapper";
 
 const AccoutnsPage = () => {
   const useCategory = useNewCategory();
@@ -42,11 +43,12 @@ const AccoutnsPage = () => {
   return (
     <div className="max-screen-2xl mx-auto w-full pb-10 -mt-24">
       <Card className="border-none shadow1">
+        <PageWrapper>
       <CardHeader className="gap-y-2 items-center md:flex-row md:items-center md:justify-between md:mb-0 mb-5">
           <CardTitle className="text-xl line-clamp-1">Category page</CardTitle>
           
           <div className="mt-11 relative">
-            <Button onClick={useCategory.onOpen} className="dark:text-[#0c1ca9] uppercase tracking-[1.5px] px-3 py-6 text-base font-bold overflow-hidden transition duration-300  hover:custom-box-shadow">
+            <Button onClick={useCategory.onOpen} className="dark:text-[#0c1ca9] tracking-[1.5px]">
               <Plus className="size-4 mr-2" />
               Add New
             </Button>
@@ -65,6 +67,7 @@ const AccoutnsPage = () => {
             disabled={isDisabled}
           />
         </CardContent>
+        </PageWrapper>
       </Card>
     </div>
   );

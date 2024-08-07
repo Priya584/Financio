@@ -115,7 +115,7 @@ export const columns: ColumnDef<ResponseType>[] = [
       const amount = parseFloat(row.getValue("amount"));
       return (
         <Badge
-          variant={amount < 0 ? "destructive" : "primary"}
+          variant={amount < 0 ? "destructive" : "greener"}
           className="text-xs font-medium px-3.5 py-2.5"
         >
           {formatCurrency(convertAmountFromMiliunits(amount))}

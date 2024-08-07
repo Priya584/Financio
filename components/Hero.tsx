@@ -12,10 +12,7 @@ export const Hero = () => {
       <div className="container">
         <div className="md:flex items-center">
           <div className="md:w-[478px]">
-            <div className="text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight dark:text-black">
-              financio is here
-            </div>
-            <h1 className="md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6">
+            <h1 className="text-3xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6">
               Finance with Financio
             </h1>
             <p className="text-xl text-[#010D3E] tracking-tight mt-6">
@@ -23,7 +20,7 @@ export const Hero = () => {
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
               <button className="bg-black text-white px-4 py-2 m-5 rounded-lg font-medium inline-flex align-items justify-center tracking-tight">
-                get for free
+                Sign In
               </button>
               <button className="bg-white text-black px-4 py-2 m-5 rounded-lg font-medium inline-flex align-items gap-2 items-center tracking-tight">
                 <span>learn more</span>
@@ -54,7 +51,7 @@ export const Hero = () => {
             {/* <Image src={cogImage} alt="cogImage" className="md:absolute md:h-full md:w-auto md:max-w-none md:left-28" /> */}
             <motion.img 
             src={cylinderImage.src} 
-            alt="cylinderImage" width={220} height={220} className="-24 h-48 rounded-full flex items-center justify-center overflow-hidden relative"
+            alt="cylinderImage" width={220} height={220} className="hidden -24 h-48 rounded-full lg:flex items-center justify-center overflow-hidden relative"
             animate={{
               y:[0,50,0],
               scale:1,
