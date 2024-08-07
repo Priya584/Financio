@@ -109,7 +109,7 @@
   .shadow2{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   }
-  .card{
+  /* .card{
     transform-style: preserve-3d;
   }
   .card:hover{
@@ -121,5 +121,9 @@
   .theback{
     backface-visibility: hidden;
     transform: rotateY(180deg);
+  } */
+
+  .customStyle{
+    transition: 0.5s;
   }
 }

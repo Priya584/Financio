@@ -40,7 +40,11 @@
     "date-fns": "^3.6.0",
     "drizzle-orm": "^0.32.0",
     "drizzle-zod": "^0.5.1",
+<<<<<<< HEAD
+    "framer-motion": "^12.0.0-alpha.0",
+=======
     "framer-motion": "^11.3.21",
+>>>>>>> c8f8957f78c511a399afd9e487cac3c1e688b8ec
     "gsap": "^3.12.5",
     "handlebars": "^4.7.8",
     "hono": "^4.5.0",
