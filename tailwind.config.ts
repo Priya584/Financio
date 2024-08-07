@@ -98,7 +98,7 @@ const config = {
         "button4": "button4 0.5s infinite 2.5s",
       },
       backgroundImage: {
-        'custom-gradient': 'linear-gradient(to bottom, #000000 20%, #00EEFF)',
+        'custom-gradient': 'linear-gradient(to bottom, #183EC2 20%, #EAEEFE)',
       }
     },
   },

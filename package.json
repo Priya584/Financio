@@ -30,6 +30,8 @@
     "@radix-ui/react-tooltip": "1.1.2",
     "@radix-ui/themes": "^3.1.1",
     "@react-md/divider": "^5.1.6",
+    "@react-three/drei": "^9.109.2",
+    "@react-three/fiber": "^8.16.8",
     "@tanstack/react-query": "^5.51.1",
     "@tanstack/react-table": "^8.19.3",
     "ai-alchemists": ".",
@@ -38,12 +40,18 @@
     "date-fns": "^3.6.0",
     "drizzle-orm": "^0.32.0",
     "drizzle-zod": "^0.5.1",
+<<<<<<< HEAD
     "framer-motion": "^12.0.0-alpha.0",
+=======
+    "framer-motion": "^11.3.21",
+>>>>>>> c8f8957f78c511a399afd9e487cac3c1e688b8ec
     "gsap": "^3.12.5",
+    "handlebars": "^4.7.8",
     "hono": "^4.5.0",
     "lucide-react": "^0.404.0",
     "next": "14.2.4",
     "next-themes": "^0.3.0",
+    "nodemailer": "^6.9.14",
     "query-string": "^9.1.0",
     "react": "^18",
     "react-countup": "^6.5.3",
@@ -60,11 +68,13 @@
     "sonner": "^1.5.0",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",
+    "three": "^0.167.1",
     "zod": "^3.23.8",
     "zustand": "^4.5.4"
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.15",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "dotenv": "^16.4.5",

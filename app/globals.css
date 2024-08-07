@@ -79,7 +79,7 @@
 @layer utilities {
   .custom-box-shadow {
     @apply shadow-none;
-    box-shadow: 0 0 3px black, 0 0 25px #00eeff, 0 0 50px #00eeff, 0 0 200px #00eeff;
+    box-shadow: 0 0 3px black, 0 0 25px #869ae1, 0 0 50px #869ae1, 0 0 200px #869ae1;
     -webkit-box-reflect: below 1px linear-gradient(transparent, #0006);
   }
 

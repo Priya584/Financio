@@ -6,13 +6,18 @@ import { Toaster } from "@/components/ui/sonner";
 import { QueryProvider } from "@/providers/query-provider";
 import { SheetProvider } from "@/providers/sheet-provider";
 
+<<<<<<< HEAD
 import { DM_Sans } from "next/font/google";
 import { twMerge } from "tailwind-merge"
 const dmSans = DM_Sans({ subsets: ["latin"] });
 import { ThemeProvider } from "@/providers/theme-provider"
 import Head from 'next/head';
+=======
+import { ThemeProvider } from "@/providers/theme-provider"
+>>>>>>> c8f8957f78c511a399afd9e487cac3c1e688b8ec
 
 import "./globals.css";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +33,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<ClerkProvider>
+<<<<<<< HEAD
 			<html lang="en" className="relative">
 				<Head>
 					<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,16 +44,31 @@ export default function RootLayout({
 					/>
 				</Head>
 				<body className={twMerge(dmSans.className, "antialiased bg-[#EAEEFE]", inter.className)}>
+=======
+			<html lang="en">
+				<head>
+				<link rel="icon" href="/favicon.ico" sizes="any"/>
+				</head>
+				<body className={inter.className}>
+>>>>>>> c8f8957f78c511a399afd9e487cac3c1e688b8ec
 					<ThemeProvider
 						attribute="class"
 						defaultTheme="system"
 						enableSystem
 						disableTransitionOnChange>
+<<<<<<< HEAD
 						<QueryProvider>
 							<SheetProvider />
 							<Toaster />
 							{children}
 						</QueryProvider>
+=======
+					<QueryProvider>
+						<SheetProvider />
+						<Toaster />
+						{children}
+					</QueryProvider>
+>>>>>>> c8f8957f78c511a399afd9e487cac3c1e688b8ec
 					</ThemeProvider>
 				</body>
 			</html>

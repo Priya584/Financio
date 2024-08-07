@@ -21,6 +21,7 @@ import { DataTable } from "@/components/data-table";
 import { columns } from "./columns";
 import { UploadButton } from "./upload-button";
 import { ImportCard } from "./import-card";
+import { PageWrapper } from "@/components/page-wrapper";
 
 enum VARIANTS {
   LIST = "LIST",
@@ -112,20 +113,17 @@ const TransactionsPage = () => {
   return (
     <div className="max-w-screen-2xl mx-auto -mt-24 pb-10 w-full">
       <Card className="border-none drop-shadow-sm">
+          <PageWrapper>
         <CardHeader className="gap-y-2 lg:flex-row lg:items-center lg:justify-between">
           <CardTitle className="text-xl line-clamp-1">
             Transaction History
           </CardTitle>
           <div className="flex flex-col lg:flex-row gap-y-2 items-center gap-x-6">
             <div className="relative">
-            <Button onClick={newTransaction.onOpen} className="text-[#00eeff] rounded-none uppercase tracking-[1.5px] px-3 py-6 text-base font-bold overflow-hidden transition duration-300  hover:custom-box-shadow">
+            <Button onClick={newTransaction.onOpen} className="dark:text-[#0c1ca9] tracking-[1.5px]">
               <Plus className="size-4 mr-2" />
               Add New
             </Button>
-            <span className="absolute block top-0 left-0 w-[134px] h-[1.8px] bg-gradient-to-r from-transparent to-white animate-button1"></span>
-            <span className="absolute block top-[-100%] left-[134px] w-[1.8px] h-[56px] bg-gradient-to-b from-transparent to-white animate-button2"></span>
-            <span className="absolute block bottom-0 left-0 w-[134px] h-[1.8px] bg-gradient-to-l from-transparent to-white animate-button3"></span>
-            <span className="absolute block bottom-[-100%] left-[0px] w-[1.8px] h-[56px] bg-gradient-to-t from-transparent to-white animate-button4"></span>
           </div>
             <UploadButton onUpload={onUpload} />
           </div>
@@ -142,6 +140,7 @@ const TransactionsPage = () => {
             disabled={isDisabled}
           />
         </CardContent>
+          </PageWrapper>
       </Card>
     </div>
   );
