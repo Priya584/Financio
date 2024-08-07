@@ -38,7 +38,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## TechStack
 <p align="left">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=nextjs,bun,tailwind,threejs,postgres,vercel" />
+    <img src="https://skillicons.dev/icons?i=nextjs,bun,tailwind,threejs,ts,postgres,vercel" />
   </a>
 </p>
 
