@@ -36,9 +36,9 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ## TechStack
-<p align="center">
+<p align="left">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=nextjs,bun" />
+    <img src="https://skillicons.dev/icons?i=nextjs,bun,tailwind,threejs,postgres,vercel" />
   </a>
 </p>
 
