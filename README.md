@@ -36,7 +36,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ## Key Features
-- Built with Next.js 14 (App Router): Utilizes the latest features and performance optimizations of Next.js for a seamless user experience.
+- ** Built with [Next.js 14](https://nextjs.org) (App Router):** Utilizes the latest features and performance optimizations of Next.js for a seamless user experience.
 
 - Fast and Lightweight Hono API Web Framework: Ensures high performance and quick response times for API requests.
 
